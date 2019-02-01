@@ -1,0 +1,56 @@
+<div class="col-md-6">
+        <h2 class="text-center">Add Employee</h2>
+        <form [formGroup]="employeeAddForm" (ngSubmit)="onSubmit()" >
+      
+        <div>  
+        <mat-form-field class="example-full-width">  
+            <label for="name">Name :</label>
+            <input matInput formControlName="name" id="name" placeholder="Name"  class="form-control" >
+            <mat-error *ngIf="employeeAddForm.get('name').errors.required">Name is required</mat-error>
+        </mat-form-field>
+        </div>     
+      
+      <div>    
+      <mat-form-field class="example-full-width">
+            <label for="salary">Salary:</label>
+            <input matInput formControlName="salary" placeholder="Salary"  class="form-control"  >
+            <mat-error *ngIf="employeeAddForm.controls.salary.errors.required">Salary is required</mat-error>
+      </mat-form-field>
+      </div>      
+      
+      <div>
+      <mat-form-field class="example-full-width">
+            <label for="department">Department:</label>
+            <input matInput formControlName="department" placeholder="Department"  class="form-control" > 
+            <mat-error *ngIf="employeeAddForm.controls.department.errors.required">Department is required</mat-error>
+      </mat-form-field>
+      </div>  
+      
+      <div>
+            <mat-form-field class="example-full-width">
+                  <label for="city">City:</label>
+                  <input matInput formControlName="city" placeholder="City" class="form-control" >
+                  <mat-error *ngIf="employeeAddForm.controls.city.errors.required">City is required</mat-error>
+            </mat-form-field>
+      </div>
+
+       <div>
+            <mat-form-field class="example-full-width">
+                    <label for="state">State:</label>
+                    <input matInput formControlName="state" placeholder="State" class="form-control"  > 
+                    <mat-error *ngIf="employeeAddForm.controls.state.errors.required">State is required</mat-error>
+            </mat-form-field>
+       </div>      
+      
+       <img *ngIf="loading" src="assets/spinner.gif" />
+       <p>
+            Form Status: {{ employeeAddForm.status }}
+        </p>
+        <mat-card-actions>
+          <button type="submit" class="btn btn-success" >Add Employee</button>
+        </mat-card-actions>  
+        
+        </form>
+      </div>
+      
+      <!--[disabled]="!employeeAddForm.valid"-->

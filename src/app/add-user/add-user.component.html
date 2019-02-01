@@ -1,0 +1,76 @@
+<div class="col-md-4"></div>
+
+<div class="col-md-6" style="padding:25px">
+  <h2 class="text-center" style="text-align: center">Add User</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+<div class="example-container">    
+<mat-form-field class="example-full-width">
+      <!-- <label for="firstName">First Name:</label> -->
+      <input matInput formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName" >
+</mat-form-field>
+     
+<mat-form-field >
+      <!-- <label for="lastName">Last Name:</label> -->
+      <input matInput formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName" > 
+</mat-form-field>
+
+<mat-form-field class="example-full-width">  
+        <!-- <label for="email">Email :</label> -->
+        <input matInput type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email" >
+</mat-form-field>
+
+<mat-form-field class="example-full-width">  
+        <!-- <label for="password">Password :</label> -->
+        <input matInput type="password" formControlName="password" placeholder="password" name="password" class="form-control" id="password" >
+</mat-form-field>
+  
+ <mat-form-field class="example-full-width">  
+            <!-- <label for="confirmPassword">ConfirmPassword :</label> -->
+            <input matInput type="confirmPassword" formControlName="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="form-control" id="confirmPassword" >
+ </mat-form-field>
+   
+ <mat-form-field class="example-full-width">
+          <!-- <label for="mobileNumber">Mobile Number:</label> -->
+          <input matInput formControlName="mobileNumber" placeholder="mobileNumber" name="mobileNumber" class="form-control" id="mobileNumber" > 
+ </mat-form-field>
+
+ <mat-form-field class="example-full-width">
+        <!-- <label for="mobileNumber">Mobile Number:</label> -->
+        <input matInput formControlName="state" placeholder="state" name="state" class="form-control" id="state" > 
+ </mat-form-field>
+
+ <mat-form-field class="example-full-width">
+      <!-- <label for="mobileNumber">Mobile Number:</label> -->
+      <input matInput formControlName="country" placeholder="country" name="country" class="form-control" id="country" > 
+ </mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <!-- <label for="mobileNumber">Mobile Number:</label> -->
+    <input matInput formControlName="pincode" placeholder="pincode" name="pincode" class="form-control" id="pincode" > 
+ </mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <!-- <label for="mobileNumber">Mobile Number:</label> -->
+    <input matInput formControlName="street" placeholder="street" name="street" class="form-control" id="street" > 
+ </mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <!-- <label for="mobileNumber">Mobile Number:</label> -->
+    <input matInput formControlName="addressline1" placeholder="addressline1" name="addressline1" class="form-control" id="addressline1" > 
+ </mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <!-- <label for="mobileNumber">Mobile Number:</label> -->
+    <input matInput formControlName="addressline2" placeholder="addressline2" name="addressline2" class="form-control" id="addressline2" > 
+ </mat-form-field>
+
+  <mat-card-actions>
+    <button class="btn btn-success" style="text-align: center">Add User</button>
+  </mat-card-actions>  
+</div> 
+  </form>
+</div>
+
+
+
